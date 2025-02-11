@@ -89,7 +89,7 @@ Loops execute a block of code repeatedly while a condition is true.
 - When **running processes** until a condition is met
 - When **processing data dynamically**
 
-### 🔹 Example: ATM Cash Withdrawal
+### 🔹 Example: ATM Cash Withdrawal (while loop)
 ```javascript
 let balance = 5000;
 let withdrawalAmount = 1000;
@@ -101,6 +101,38 @@ while (balance >= withdrawalAmount) {
 
 console.log("Not enough balance for another withdrawal.");
 ```
+
+### 🔹 // do while loop Example: ATM Pin Retry
+
+### 🛠️ When to Use
+- When ensuring the loop body executes at least once.
+- When repeatedly prompting for user input until valid data is entered.
+-When the condition needs to be checked after the loop body executes.
+
+let pinCorrect = false;
+do {
+  const enteredPin = prompt("Enter your 4-digit PIN:");
+  pinCorrect = (enteredPin === "1234");
+} while (!pinCorrect);
+
+console.log("Access granted 💰");
+```
+
+### 📌 When to Use `do...while`
+The `do...while` loop is best used in scenarios where you need to **execute a block of code at least once**, regardless of the condition. This is particularly useful when:
+
+1. **Ensuring User Input Validation**  
+   - Example: Prompting a user to enter valid data before proceeding.
+
+2. **Repeating Actions Until a Condition Is Met**  
+   - Example: Asking a user to agree to terms and conditions before signing up.
+
+3. **Game Loops or Simulations**  
+   - Example: Running a game loop until the player chooses to quit.
+
+4. **Menu-Based Programs**  
+   - Example: Showing a menu repeatedly until the user selects "Exit."
+
 ---
 
 ## 5️⃣ JavaScript `break` Statement
@@ -155,7 +187,7 @@ for (let i = 0; i < products.length; i++) {
 | **if...else Statement** | Checking student exam results | Executing different logic based on conditions |
 | **for Loop** | Countdown timer for a flash sale | Iterating over lists or running a loop a fixed number of times |
 | **while Loop** | ATM cash withdrawal | Running processes until a condition is met |
+| **do...while Loop** |  ATM Pin Retry | Ensuring at least one execution before condition checking |
 | **break Statement** | Searching for a customer order | Exiting loops when a condition is met |
 | **continue Statement** | Skipping unavailable items in an online store | Skipping specific iterations in a loop |
-
 
