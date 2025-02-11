@@ -10,7 +10,8 @@ Control flow in JavaScript determines the order in which statements are executed
 4. JavaScript `while` and `do...while` Loops
 5. JavaScript `break` Statement
 6. JavaScript `continue` Statement
-7. When to Use Each Control Flow Structure
+7. JavaScript `switch...case` Statement
+8. When to Use Each Control Flow Structure
 
 ---
 
@@ -164,6 +165,44 @@ for (let i = 0; i < products.length; i++) {
 }
 ```
 ---
+## '7️⃣ JavaScript `switch...case` Statement
+### 📌 Explanation
+The `switch` statement evaluates an expression and matches the expression's value to a specific case.
+
+### 🛠️ When to Use
+- When you have multiple potential values for a variable, making the code cleaner than multiple if-else statements
+- When handling distinct cases where each case is mutually exclusive
+- When enhancing readability and maintenance by clearly separating different conditions
+### 🔹Example: Coffee Shop Ordering System
+```javascript
+function getCoffeePrice(order) {
+  let price;
+
+  switch (order.toLowerCase()) {
+    case "espresso":
+      price = "Rs. 150";
+      break;
+    case "latte":
+      price = "Rs. 200";
+      break;
+    case "cappuccino":
+      price = "Rs. 180";
+      break;
+    case "americano":
+      price = "Rs. 170";
+      break;
+    default:
+      price = "Sorry, we don't have that drink.";
+  }
+
+  return price;
+}
+
+console.log(getCoffeePrice("Latte"));
+console.log(getCoffeePrice("cappuccino"));
+console.log(getCoffeePrice("tea"));
+```
+---
 
 ## 📌 Summary Table
 | Concept | Real-World Example | When to Use |
@@ -174,5 +213,6 @@ for (let i = 0; i < products.length; i++) {
 | **while Loop** | ATM cash withdrawal | Running processes until a condition is met |
 | **do...while Loop** |  ATM Pin Retry | Ensuring at least one execution before condition checking |
 | **break Statement** | Searching for a customer order | Exiting loops when a condition is met |
+| **switch...casse Statement** | Coffee Shop Ordering System | handling distinct cases where each case is mutually exclusive |
 | **continue Statement** | Skipping unavailable items in an online store | Skipping specific iterations in a loop |
 
