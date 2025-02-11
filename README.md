@@ -108,7 +108,7 @@ console.log("Not enough balance for another withdrawal.");
 - When ensuring the loop body executes at least once.
 - When repeatedly prompting for user input until valid data is entered.
 -When the condition needs to be checked after the loop body executes.
-
+```javascript
 let pinCorrect = false;
 do {
   const enteredPin = prompt("Enter your 4-digit PIN:");
@@ -118,22 +118,7 @@ do {
 console.log("Access granted 💰");
 ```
 
-### 📌 When to Use `do...while`
-The `do...while` loop is best used in scenarios where you need to **execute a block of code at least once**, regardless of the condition. This is particularly useful when:
 
-1. **Ensuring User Input Validation**  
-   - Example: Prompting a user to enter valid data before proceeding.
-
-2. **Repeating Actions Until a Condition Is Met**  
-   - Example: Asking a user to agree to terms and conditions before signing up.
-
-3. **Game Loops or Simulations**  
-   - Example: Running a game loop until the player chooses to quit.
-
-4. **Menu-Based Programs**  
-   - Example: Showing a menu repeatedly until the user selects "Exit."
-
----
 
 ## 5️⃣ JavaScript `break` Statement
 ### 📌 Explanation
