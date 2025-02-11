@@ -107,7 +107,7 @@ console.log("Not enough balance for another withdrawal.");
 ### 🛠️ When to Use
 - When ensuring the loop body executes at least once.
 - When repeatedly prompting for user input until valid data is entered.
--When the condition needs to be checked after the loop body executes.
+- When the condition needs to be checked after the loop body executes.
 ```javascript
 let pinCorrect = false;
 do {
